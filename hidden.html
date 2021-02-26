@@ -41,6 +41,33 @@ function processGuess(){
     }
 }
 </script>
+<div class="container">
+    <img id="plant" src="Lotus.jpg" alt="error" style="height: 200px; width: 200;" onclick="rotateImage()">
+</div>
+<script>
+    var image = 0;
+    function rotateImage(){
+        switch(image){
+            case 0:
+                image+=1;
+                document.getElementById("plant").src="Lotus.jpg"
+                break;
+            case 1:
+                image+=1;
+                document.getElementById("plant").src="Aloe vere.jpeg"
+                break;
+            case 2:
+                image+=1;
+                document.getElementById("plant").src="Tecoma.jpeg"
+                break;
+            default:
+                image+=1;
+                document.getElementById("plant").src="Lotus.jpg"
+                break;
+        }
+
+    }
+</script>
 
 </body>
 </html> 
