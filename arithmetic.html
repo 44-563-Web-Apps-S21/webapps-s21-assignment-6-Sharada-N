@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arithmetic Operations Page</title>
+    </head>
+ 
+<body>
+
+<h2>Sharada Devi Noothalapati computes</h2>
+
+<form>
+    <label for="first_number">Enter a number </label>
+    <input type ="number" id="first_number" name="first_number" min=10 max=50 step=2 value=10> <br>
+
+    <label for="Second_number">Enter a number </label>
+    <input type ="number" id="Second_number" name="Second_number" autofocus value=2> <br>
+
+    <input type="button" onclick="permutations()" value="compute">
+</form>
+
+
+<p id="permutateResult">This text will be replaced </p>
+
+<script> 
+
+function permutations (){
+    
+    num1 = document.getElementById("first_number").value
+    num2 = document.getElementById("Second_number").value
+    let product =1
+    for( first =num1 ; first>=(num1-num2 +1); first--)
+    {
+        product = product * first
+    }
+    
+    document.getElementById("permutateResult").innerHTML = num1 + " permute "+num2 +" should be "+product
+}
+</script>
+
+<form>
+    <input type ="radio" id = "add" name = "arith_operator" onclick="processRadio()">
+    <label for ="add" >+</label><br>
+    <input type ="radio" id = "minus" name = "arith_operator" onclick="processRadio()">
+    <label for ="minus" >-</label><br>
+    <input type ="radio" id = "multiply" name = "arith_operator" onclick="processRadio()">
+    <label for ="multiply" >*</label><br>
+    <input type ="radio" id = "devide" name = "arith_operator" onclick="processRadio()">
+    <label for ="devide" >/</label><br>
+
+</form>
+<p id = "arithmeticResult">Results of Radio buttons will be shown here</p>
+
+<script>
+    function processRadio(){
+        num1 = document.getElementById("first_number").value
+         num2 = document.getElementById("Second_number").value
+         result = 0
+         text = ""
+        if(document.getElementById("add").checked == true)
+        {
+            result = +num1 + +num2
+            text = "sum of " +num1+" and " +num2+ " is "+result
+        }
+       else if(document.getElementById("minus").checked == true)
+        {
+            result = num1 - num2
+            text = "Difference of " +num1+" and " +num2+ " is "+result
+        }
+        else if(document.getElementById("multiply").checked == true)
+        {
+            result = num1  * num2
+            text = "Product of " +num1+" and " +num2+ " is "+result
+        }
+        else if(document.getElementById("devide").checked =true)
+        {
+            result = num1/num2
+            text = "Division of " +num1+" and " +num2+ " is "+result
+        }
+        document.getElementById("arithmeticResult").innerHTML = text
+
+    }
+</script>
+
+</body>
+</html> 
