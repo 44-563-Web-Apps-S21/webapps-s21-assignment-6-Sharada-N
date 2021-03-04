@@ -2,12 +2,16 @@
 <html>
     <head>
         <title>Bear's Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
  
 <body>
 
 <h2>Sharada Devi Noothalapati builds a bear</h2>
-
+<div class="container">
 <form>
     <input type ="checkbox" id="check_first" name="check_first" value="hat">
     <label for="check_first">hat </label><br>
@@ -18,7 +22,7 @@
     <input type ="checkbox" id="check_third" name="check_third" value="shirt">
     <label for="check_third">shirt </label><br>
 
-    <input type="button" onclick="startBear()" value="Start a bear">
+    <input type="button" onclick="startBear()" value="Start a bear" class="btn btn-primary">
     <br>
 </form>
 
@@ -29,7 +33,7 @@
     <label for = "valueEntered">Enter a value</label>
     <input type ="text" id = "valueEntered" name ="valueEntered"><br>
 
-    <input type ="button" onclick="updatebear()" value ="Update the bear">
+    <input type ="button" onclick="updatebear()" value ="Update the bear" class="btn btn-primary">
 </form>
 
 
@@ -64,6 +68,6 @@ function updatebear(){
         console.log(my_bear)
     }
 </script>
-
+</div>
 </body>
 </html> 
