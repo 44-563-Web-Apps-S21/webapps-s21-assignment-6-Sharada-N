@@ -57,9 +57,9 @@ function startBear(){
     console.log(my_bear)
 }
 function updatebear(){
-        text1 = document.getElementById("property").value 
-        text2 = document.getElementById("valueEntered").value
-        my_bear[text1]=text2
+        property = document.getElementById("property").value 
+        valueEntered = document.getElementById("valueEntered").value
+        my_bear[property]=valueEntered
         document.getElementById("bearResult").innerHTML=JSON.stringify(my_bear)
         console.log(my_bear)
     }

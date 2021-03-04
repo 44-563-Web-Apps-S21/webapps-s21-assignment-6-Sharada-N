@@ -2,6 +2,10 @@
 <html>
     <head>
         <title>Arithmetic Operations Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
  
 <body>
@@ -15,7 +19,7 @@
     <label for="Second_number">Enter a number </label>
     <input type ="number" id="Second_number" name="Second_number" autofocus value=2> <br>
 
-    <input type="button" onclick="permutations()" value="compute">
+    <input type="button" onclick="permutations()" value="compute" class="btn btn-primary">
 </form>
 
 
@@ -48,7 +52,7 @@ function permutations (){
     <label for ="devide" >/</label><br>
 
 </form>
-<p id = "arithmeticResult">Results of Radio buttons will be shown here</p>
+<p id = "arithmeticResult" style="color: green; font-family: cursive;">Results of Radio buttons will be shown here</p>
 
 <script>
     function processRadio(){
